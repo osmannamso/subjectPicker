@@ -29,9 +29,15 @@ namespace subjectPicker
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
+                    name: "message",
+                    template: "say/{**message}",
+                    defaults: new { controller="Message", action = "ShowMessage" });
+
+                routes.MapRoute(
                     name: "default",
                     template: "{controller=Main}/{action=Index}/{id?}");
             });
+            app.UseStaticFiles();
 
             // app.UseMvcWithDefaultRoute(); the same as previous line
         }

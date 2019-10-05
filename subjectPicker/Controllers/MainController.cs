@@ -5,9 +5,10 @@ namespace subjectPicker.Controllers
     public class MainController : Controller
     {
         // GET
-        public string Index()
+        public IActionResult Index()
         {
-            return "Main Controller";
+            // ReSharper disable once Mvc.ViewNotResolved
+            return View();
         }
     }
 }
