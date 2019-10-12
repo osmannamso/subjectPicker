@@ -1,0 +1,21 @@
+@model subjectPicker.Models.Movies.Movie
+
+<br/>
+<form asp-action="Search" asp-controller="Movies" method="get">
+    
+
+    <div class="field has-addons">
+        <div class="control">
+            <input class="input" name="text" type="text" placeholder="Find a movie">
+        </div>
+        <div class="control">
+            <button class="button is-info">
+                Search
+            </button>
+        </div>
+    </div>
+    <a href="/movies">View all</a>
+
+
+</form>
+<br />
